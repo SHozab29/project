@@ -1,0 +1,24 @@
+******************************************************* DBMS project****************************************
+
+Progress:
+
+Oct 24 2022:
+            finalized login and register page
+
+Oct 26 2022:
+            added licence no in registration page
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+TODO:
+    add authentication
+    add licence no in register page
+    add captcha in login page
+
+    add all backends
+
+
+            
