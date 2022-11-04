@@ -1,7 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-#from django.contrib.auth.models import User,auth
+from django.shortcuts import render,redirect
+from django.contrib.auth.models import User,auth
 
+from .models import medical
 # Create your views here.
 
 def login(request):
@@ -18,16 +19,43 @@ def register(request):
         password = request.POST['password']
         confirmPassword = request.POST['confirmPassword']
         termsAgreement = request.POST['termsAgreement']
+
+        #if (termsAgreement==True):
+        medicalUser = medical.objects.create(medicalName=medicalName,medicalEmail=medicalEmail,medicalPhoneNo=medicalPhoneNo,licenseNo=licenseNo,password=password)
+
+        
         print("Name: " + medicalName)
         print("Email: " + medicalEmail)
         print("PhoneNo.: " + medicalPhoneNo)
         print("LicenseNo.: " + licenseNo)
-        print("Terms agreement: " + termsAgreement)
-        #user = User.objects.create_user()
-        return render(request,'login.html')
+       
+        
+        return redirect('/')
 
     else:
         return render(request,'register.html')
 
 def terms(request):
     return render(request,'terms.html')
+
+def userRegister(request):
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirmPassword = request.POST['confirmPassword']
+        termsAgreement = request.POST['termsAgreement']
+
+        #if (termsAgreement==True):
+        print(username)
+        print(first_name)
+        print(last_name)
+
+        user = User.objects.create_user(username=username,first_name=first_name,last_name=last_name,email=email,password=password)
+        user.save()
+        return redirect('/')
+    else:
+        return render(request,'userRegister.html')
