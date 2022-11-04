@@ -18,7 +18,11 @@ def register(request):
         password = request.POST['password']
         confirmPassword = request.POST['confirmPassword']
         termsAgreement = request.POST['termsAgreement']
-        
+        print("Name: " + medicalName)
+        print("Email: " + medicalEmail)
+        print("PhoneNo.: " + medicalPhoneNo)
+        print("LicenseNo.: " + licenseNo)
+        print("Terms agreement: " + termsAgreement)
         #user = User.objects.create_user()
         return render(request,'login.html')
 

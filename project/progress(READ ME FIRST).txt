@@ -8,6 +8,10 @@ Oct 24 2022:
 Oct 26 2022:
             added licence no in registration page
 
+Nov 3 2022:
+            added buy page 
+            will have to link buy page after login/register
+
 
 --------------------------------------------------------------------------------------------------------
 
@@ -15,7 +19,7 @@ Oct 26 2022:
 
 TODO:
     add authentication
-    add licence no in register page
+    add otp confirmation in register page
     add captcha in login page
 
     add all backends

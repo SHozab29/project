@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'fontawesome',
     'index',
     'accounts',
+    'buyPage',
 ]
 
 MIDDLEWARE = [
@@ -91,7 +92,7 @@ DATABASES = {
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'DistributorsDB',
+		'NAME': 'distributorsdb',
 		'USER': 'root',
 		'PASSWORD': 'pass!@#$',
 		'HOST':'localhost',
