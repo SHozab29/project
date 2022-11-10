@@ -14,7 +14,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-
+  <link rel="stylesheet" href="{% static 'css/Captchastyle.css' %}">
+                    <!-- Font Awesome CDN Link for Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/ type="text/css">
   <title>form</title>
 </head>
 <body>
@@ -45,13 +47,27 @@
                         <label class="form-label" for="form3Example4c">Password</label>
                       </div>
                     </div>
-  
-                    <div class="form-check d-flex justify-content-center mb-5">
-                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                      <label class="form-check-label" for="form2Example3">
-                        CAPTCHA LOREM IMPSUM
-                      </label>
+                   <div class="wrapper">
+                      <header>Captcha </header>
+                      <div class="captcha-area">
+                        <div class="captcha-img">
+                          <img src="{% static 'assets/img/captcha-bg.png' %}">
+                    
+                          <span class="captcha"></span>
+                        </div>
+                        <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+                      </div>
+                      <form action="#" class="input-area">
+                        <input type="text" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
+                        <button class="check-btn">Check</button>
+                      </form>
+                      
+                    <div class="status-text" style="display: none; color: rgb(77,178,236);">
+                      Nice! You don't appear to be a robot.</div>
+                
                     </div>
+                    <script src="{% static 'js/Captchascript.js' %}"></script><br>
+                  
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                       <button type="button" class="btn btn-primary btn-lg">Log in</button>

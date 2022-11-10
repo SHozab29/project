@@ -5,7 +5,7 @@ from django.forms import forms
 class medical(models.Model):
     medicalName = forms.CharField(label='medicalName',max_length=100)
     medicalEmail: str
-    medicalPhoneNo: int64
+    medicalPhoneNo: int 64
     licenseNo: str
     password: str
     confirmPassword: str

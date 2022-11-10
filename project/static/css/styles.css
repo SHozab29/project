@@ -2198,6 +2198,27 @@ progress {
     transition: none;
   }
 }
+.form .captcha .preview {
+  display: inline-block;
+  user-select: none;
+}
+.form .captcha .captcha-form {
+  display: flex;
+}
+.form .captcha .captcha-form input{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #888;
+}
+.form .captcha .captcha-form .captcha-refresh{
+  width: 40px;
+  border: none;
+  outline: none;
+  background: #888;
+  color: #eee;
+  cursor: pointer;
+
+}
 .form-control[type=file] {
   overflow: hidden;
 }
