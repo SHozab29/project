@@ -92,9 +92,9 @@ DATABASES = {
 		'ENGINE': 'django.db.backends.mysql',
 		'NAME': 'distributorsdb',
 		'USER': 'root',
-		'PASSWORD': 'khan@123',
+		'PASSWORD': 'pass!@#$',
 		'HOST':'localhost',
-		'PORT':'3306',
+		'PORT':'3307',
 	}
 }
 
