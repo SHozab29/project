@@ -31,11 +31,12 @@
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log in</p>
   
-                  <form class="mx-1 mx-md-4">
+                  <form action="login" method="POST" class="mx-1 mx-md-4">
+                    {% csrf_token %}
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="email" id="form3Example3c" class="form-control" />
+                        <input name="email" type="email" id="form3Example3c" class="form-control" />
                         <label class="form-label" for="form3Example3c">Registered Email</label>
                       </div>
                     </div>
@@ -43,34 +44,16 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="form3Example4c" class="form-control" />
+                        <input name="password" type="password" id="form3Example4c" class="form-control" />
                         <label class="form-label" for="form3Example4c">Password</label>
                       </div>
-                    </div>
-                   <div class="wrapper">
-                      <header>Captcha </header>
-                      <div class="captcha-area">
-                        <div class="captcha-img">
-                          <img src="{% static 'assets/img/captcha-bg.png' %}">
-                    
-                          <span class="captcha"></span>
-                        </div>
-                        <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
                       </div>
-                      <form action="#" class="input-area">
-                        <input type="text" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
-                        <button class="check-btn">Check</button>
-                      </form>
-                      
-                    <div class="status-text" style="display: none; color: rgb(77,178,236);">
-                      Nice! You don't appear to be a robot.</div>
-                
                     </div>
                     <script src="{% static 'js/Captchascript.js' %}"></script><br>
                   
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="button" class="btn btn-primary btn-lg">Log in</button>
+                      <button type="submit" class="btn btn-primary btn-lg">Log in</button>
                     </div>
   
                   </form>
