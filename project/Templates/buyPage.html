@@ -1,352 +1,143 @@
 <!DOCTYPE html>
-<html>
-{% load static %}
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>AIOCD</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrapBuyPage.css' %}" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <style>
+        #cardd {
+            padding-top: 80px;
+        }
+        #cardd .person img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        #cardd .person{
+            box-shadow: 0 0 30px rgba(47, 44, 44, 0.327);
+        }
+        #cardd .person .details h2{
+            color: rgb(75, 8, 8);
+            font-size: 25px;
+            font-weight: 700px;
+        }
+        #cardd .heading h2{
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 44px;
+            color: rgb(30, 3, 3);
+        }
+    </style>
 </head>
-
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <div class="top_contact-container">
-          <div class="tel_container">
-            <a href="">
-              <img src="{% static 'assets/img/telephone-symbol-button.png' %}" alt=""> Call : +01 1234567890
-            </a>
-          </div>
-          <div class="social-container">
-            <a href="">
-              <img src="{% static 'assets/img/fb.png' %}" alt="" class="s-1">
-            </a>
-            <a href="">
-              <img src="{% static 'assets/img/twitter.png' %}" alt="" class="s-2">
-            </a>
-            <a href="">
-              <img src="{% static 'assets/img/instagram.png' %}" alt="" class="s-3">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="{% static 'assets/img/logo.png' %}" alt="">
-            <span>
-              AIOCD
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+    <div id="navbar"><nav class="navbar navbar-expand-lg bg-black navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AIOCD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex  flex-column flex-lg-row align-items-center w-100 justify-content-between">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="medicine.html"> Medicine </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="buy.html"> Online Buy </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="news.html"> News </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact">Contact us</a>
-                </li>
-              </ul>
-              <form class="form-inline ">
-                <input type="search" placeholder="Search">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
-              <div class="login_btn-contanier ml-0 ml-lg-5">
-                <a href="">
-                  <img src="{% static 'assets/img/user.png' %}" alt="">
-                  <span>
-                    Profile
-                  </span>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Medicines</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{username}}
                 </a>
-              </div>
-            </div>
-          </div>
-
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-
-
-
-
-  <!-- health section -->
-
-  <section class="health_section layout_padding">
-    <div class="health_carousel-container">
-      <h2 class="text-uppercase">
-        Medicine & Health
-
-      </h2>
-      
-      <div class="carousel-wrap layout_padding2">
-        <div class="carousel">
-          <div class="item">
-            <div class="box">
-              <div class="btn_container">
-                <form action="home" method="POST">
-                  {% csrf_token %}
-                  <button type="submit">+</button>
-                </form>
-              </div>
-              <div class="img-box">
-                <img src="{% static 'assets/img/p-1.jpg' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star-o" aria-hidden="true"></i>
-
-                </div>
-                <div class="text">
-                  <h6>
-                    {{medicine.name}}
-                  </h6>
-                  <h6 class="price">
-                    <span>
-                      ₹
-                    </span>
-                    {{medicine.price}}
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="health_carousel-container">
-      <h2 class="text-uppercase">
-        Vitamins & Supplements
-
-
-      </h2>
-      <div class="carousel-wrap layout_padding2">
-        <div class="carousel">
-          <div class="item">
-            <div class="box">
-              <div class="btn_container">
-                <a href="">
-                  +
-                </a>
-              </div>
-              <div class="img-box">
-                <img src="{% static 'assets/img/p-6.jpg' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <div class="star_container">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star-o" aria-hidden="true"></i>
-
-                </div>
-                <div class="text">
-                  <h6>
-                    Medicine
-                  </h6>
-                  <h6 class="price">
-                    <span>
-                      $
-                    </span>
-                    30
-                  </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    <div class="d-flex justify-content-center">
-      <a href="">
-        See more
-      </a>
-    </div>
-  </section>
-
-  <!-- end health section -->
-
-
-
-  <!-- info section -->
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h4>
-              Contact
-            </h4>
-            <div class="box">
-              <div class="img-box">
-                <img src="{% static 'assets/img/telephone-symbol-button.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  +01 123567894
-                </h6>
-              </div>
-            </div>
-            <div class="box">
-              <div class="img-box">
-                <img src="{% static 'assets/img/email.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  demo@gmail
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_menu">
-            <h4>
-              Menu
-            </h4>
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="medicine.html"> Medicine </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="buy.html"> Online Buy </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Cart</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="index">Log out</a></li>
+                </ul>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info_news">
-            <h4>
-              newsletter
-            </h4>
-            <form action="">
-              <input type="text" placeholder="Enter Your email">
-              <div class="d-flex justify-content-center justify-content-md-end mt-3">
-                <button>
-                  Subscribe
-                </button>
-              </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
           </div>
         </div>
-      </div>
+      </nav></div>
+    <div id="cardd">
+    <div class="container">
+        <div class="Heading text-center">
+            <h2>Buy From here...</h2>
+        </div>
+<div class="row p-3">
+<div class="col-md-4">
+<div class="p-4 person text-center">
+    <img src="{% static 'assets\img\medicines\p1.jpg' %}">
+<div class="details">
+<h2 class="mt-3">Paracetamol</h2>
+<p>Paracetamol is a commonly used medicine that can help treat pain and reduce a high temperature (fever). It's typically used to relieve mild or moderate pain, such as headaches, toothache or sprains, and reduce fevers caused by illnesses such as colds and flu.</p>
+<button type="submit" class="btn btn-success">Add to Cart</button>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+    <div class="p-4 person text-center">
+        <img src="{% static 'assets\img\medicines\P2.jpeg' %}">
+    <div class="details">
+    <h2 class="mt-3">Orofer-XT</h2>
+    <p>Orofer Xt Tablet is a Tablet manufactured by EMCURE PHARMA. It is commonly used for the diagnosis or treatment of anemia, anemia due to folic acid deficiency, folate deficiency . It has some side effects such as Constipation,Bloating,Allergic rejection,Bitter taste in the mouth.</p>
+    <button type="button" class="btn btn-success">Add to Cart</button>
+  </div>
     </div>
-  </section>
+</div>
+<div class="col-md-4">
+    <div class="p-4 person text-center">
+        <img src="{% static 'assets\img\medicines\DOLO-650.jpeg' %}">
+    <div class="details">
+    <h2 class="mt-3">DOLO-650</h2>
+    <p>Dolo 650 Tablet helps relieve pain and fever by blocking the release of certain chemical messengers responsible for fever and pain. It is used to treat headaches, migraine, nerve pain, toothache, sore throat, period (menstrual) pains, arthritis, muscle aches, and the common cold.</p>
+    <button type="button" class="btn btn-success">Add to Cart</button>
+  </div>
+    </div>
+    </div>
+<div class="col-md-4">
+        <div class="p-4 person text-center">
+            <img src="{% static 'assets\img\medicines\benadrayl.jpg' %}">
+        <div class="details">
+        <h2 class="mt-3">Benadryl</h2>
+        <p>Benadryl Cough Formula Syrup 50 ml belongs to a class of medications called ‘expectorants’ used to treat cough. Coughing (dry or productive) is a body’s way of clearing irritants (like allergens, mucus or smoke) from airways and preventing infection. There are two types of coughs, namely: Dry cough and chesty cough.</p>
+        <button type="button" class="btn btn-success">Add to Cart</button>
+      </div>
+        </div>
+        </div>
+<div class="col-md-4">
+          <div class="p-4 person text-center">
+              <img src="{% static 'assets\img\medicines\ch-ph.jpeg' %}">
+          <div class="details">
+          <h2 class="mt-3">Chloroquine Phosphate tablet</h2>
+          <p>Chloroquine has been studied for the treatment and prevention of coronavirus disease 2019 (COVID-19).
 
+            The FDA had approved an Emergency Use Authorization (EUA) on March 28, 2020 to allow distribution of chloroquine for the treatment adults and adolescents who weigh at least 110 pounds (50 kg).</p>
+            <button type="button" class="btn btn-success">Add to Cart</button>
+          </div>
+          </div>
+          </div>
+<div class="col-md-4">
+            <div class="p-4 person text-center">
+                <img src="{% static 'assets\img\medicines\Amoxicillin.jpeg' %}">
+            <div class="details">
+            <h2 class="mt-3">Amoxicillin</h2>
+            <p>Amoxicillin is used to treat a wide variety of bacterial infections.It will not work for viral infections (such as common cold, flu). Using any antibiotic when it is not needed can cause it to not work for future infections.Amoxicillin is also used with other medications to treat stomach/intestinal ulcers caused by the bacteria H.</div>
+              <button type="button" class="btn btn-success">Add to Cart</button>
+            </div>
+            </div>
+            
 
-  <!-- end info section -->
-
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2019 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </section>
-  <!-- footer section -->
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
-  </script>
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      navText: [],
-      autoplay: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    });
-  </script>
-  <script type="text/javascript">
-    $(".owl-2").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      navText: [],
-      autoplay: true,
-
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    });
-  </script>
+</div>
+</div>
+</div>
 </body>
-
 </html>
