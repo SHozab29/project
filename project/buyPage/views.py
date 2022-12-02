@@ -20,7 +20,7 @@ def home(request):
 
         return render(request, 'buyPage.html',{'medicine' : medicine})
     else:
-        username = 'shozab'
+        username = 'User'
         return render(request, 'buyPage.html',{'username' : username})
 
 def contact(request):
@@ -28,6 +28,9 @@ def contact(request):
 
 def index(request):
     return redirect('/#page-top')
+
+def profile(request):
+    return render(request, 'profile.html')
 
 
 #def add_to_cart(request):
